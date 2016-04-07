@@ -1,4 +1,4 @@
-FROM php:5-fpm
+FROM php:5.6.20-fpm
 
 RUN buildDeps=" \
       libfreetype6-dev \
