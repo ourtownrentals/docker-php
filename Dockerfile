@@ -8,7 +8,7 @@ RUN buildDeps=" \
     "; \
     set -x \
  && apt-get update \
- && apt-get install -y --no-install-recommends \
+ && apt-get install -y --no-install-recommends --no-install-suggests \
     $buildDeps \
     libfreetype6 \
     libjpeg62-turbo \
