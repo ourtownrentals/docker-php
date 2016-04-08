@@ -7,7 +7,10 @@ RUN buildDeps=" \
       libcurl4-gnutls-dev \
     "; \
     set -x \
- && apt-get update && apt-get install -y $buildDeps --no-install-recommends \
+ && apt-get update \
+ && apt-get install -y --no-install-recommends \
+    $buildDeps \
+    libjpeg62 \
  && rm -rf /var/lib/apt/lists/* \
  && docker-php-ext-configure gd \
     --with-freetype-dir=/usr/include/ \
