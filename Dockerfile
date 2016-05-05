@@ -1,5 +1,7 @@
 FROM php:5.6.21-fpm
 
+MAINTAINER Evan Sosenko <razorx@evansosenko.com>
+
 RUN buildDeps=" \
       libfreetype6-dev \
       libjpeg-dev \
