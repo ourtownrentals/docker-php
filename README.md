@@ -7,6 +7,15 @@
 Custom docker image for PHP-FPM.
 Based on the [official php image](https://hub.docker.com/_/php/).
 
+### Modifications
+
+#### PHP Modules
+
+- curl
+- gd
+- mysqli
+- ionCube loader
+
 ## Usage
 
 ### Requirements
