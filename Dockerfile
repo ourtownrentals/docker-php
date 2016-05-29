@@ -1,4 +1,4 @@
-FROM php:5.6.21-fpm
+FROM php:7.0.7-fpm-alpine
 
 MAINTAINER Evan Sosenko <razorx@evansosenko.com>
 
@@ -27,10 +27,11 @@ RUN buildDeps=" \
 
 RUN cd /tmp \
  && curl -o ioncube.tar.gz \
-    http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64_5.1.2.tar.gz \
- && echo '08616dc35d145bac27c72d0537e933b26c98e1f2  ioncube.tar.gz' | shasum -c \
+    https://www.ioncube.com/php7-linux-x86-64-beta5.tgz \
+ && echo '856a25c79b9542163406a70082209bcfe1519a96  ioncube.tar.gz' | shasum -c \
  && tar -xzf ioncube.tar.gz \
- && mv ioncube/ioncube_loader_lin_5.6.so /usr/local/lib/php/extensions/* \
- && rm -rf ioncube.tar.gz ioncube \
- && echo "zend_extension=ioncube_loader_lin_5.6.so" \
-    > /usr/local/etc/php/conf.d/00_docker-php-ext-ioncube_loader_lin_5.6.ini
+ && mv ioncube_loader_lin_x86-64_7.0b5.so /usr/local/lib/php/extensions/* \
+ && rm -rf ioncube.tar.gz ioncube_loader_lin_x86-64_7.0b5.so \
+    README_PHP7_X86_64_BETA \
+ && echo "zend_extension=ioncube_loader_lin_x86-64_7.0b5.so" \
+    > /usr/local/etc/php/conf.d/00_docker-php-ext-ioncube_loader_lin_7.0.ini
