@@ -1,0 +1,43 @@
+README 64 bit ionCube Loader for PHP 7
+======================================
+
+This is a beta release of the ionCube Loader non-thread-safe for 64-bit PHP 7 on Linux.
+We do *NOT* recommend its use on any production system. It will not, of course, 
+work with a 32-bit PHP or a thread-safe PHP.
+
+This will only work with files produced by the PHP 5.6 ionCube Encoder version 9.
+So files produced by the PHP 5.5 and lower encoders will not work.
+
+
+Resolved Issues since beta 4
+----------------------------
+
+* Problem with indirect function calls, such as with __call, in PHP 7.0.4+.
+
+
+Resolved Issues since beta 3
+----------------------------
+
+* Running unencoded files with both the ionCube Loader and OPcache enabled would cause a crash.
+
+* In certain cases encoded files would fail if they were run with OPcache also enabled.
+
+* Memory leak that was occurring with the list construct.
+
+
+ Resolved Issues since beta 2
+-----------------------------
+
+* Problem with resolving dynamic keys when method obfuscation was enabled.
+
+* Issues with encapsulated strings (e.g. "  $fields[0]\n").
+
+* Problems with generators.
+
+* Issue with the "short circuit" ternary operator (expr1 ?: expr3).
+
+
+Reporting Issues
+----------------
+
+Please report any issues to our Support Help Desk at http://support.ioncube.com 
