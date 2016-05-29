@@ -1,4 +1,4 @@
-FROM php:5.6.21-fpm
+FROM php:5.6.22-fpm
 
 MAINTAINER Evan Sosenko <razorx@evansosenko.com>
 
