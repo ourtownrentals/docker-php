@@ -7,8 +7,4 @@ This change log follows the conventions of
 
 ## [Unreleased]
 
-## 0.1.0 / 2016-05-05
-
-- Initial release.
-
-[Unreleased]: https://github.com/ourtownrentals/docker-php/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/ourtownrentals/docker-php/compare/v0.0.0...HEAD
