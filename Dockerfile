@@ -21,9 +21,7 @@ RUN buildDeps=" \
  && docker-php-ext-install -j$(nproc) gd \
  && docker-php-ext-install -j$(nproc) curl \
  && docker-php-ext-install -j$(nproc) mysqli \
- && apt-get purge -y --auto-remove $buildDeps \
- && cd /usr/src/php \
- && make clean
+ && apt-get purge -y --auto-remove $buildDeps
 
 RUN cd /tmp \
  && curl -o ioncube.tar.gz \
